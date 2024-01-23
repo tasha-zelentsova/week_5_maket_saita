@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+  border: 1px solid;
+}
+
+.container {
+  height: 100vh; /* высота всего экрана */
+  display: flex; /* стала главной ось Х */
+  flex-direction: column; /*чтобы эл-ты контейнера встрали друг под другом*/
+}
+
+header {
+  flex-basis: 10%; /* 10% от height: 100vh */
+  display: flex; /* обращаемся  кродителю, чтобы не задавать паддинги  */
+  justify-content: center; /* все элементы по оси У выставить по центру */
+  align-items: center; /* все элементы по оси Х выставить по центру */
+}
+
+main {
+  flex-basis: 70%; /* 70% высоты от height: 100vh */
+  display: flex;
+}
+
+.content {
+  flex-basis: 70%; /* 70% ширины от height: 70vh */
+  border: 1px solid; /* чтобы было видно какой бордер у секций Майна */
+  display: flex;
+  display: inline-block;
+}
+
+.block1 {
+  border: 1px solid; /* чтобы было видно какой бордер у секций */
+  display: flex;
+  margin: 20px;
+  justify-content: center; /* все элементы по оси У выставить по центру */
+  align-items: center; /* все элементы по оси Х выставить по центру */
+  /* margin: 25px; здесь можно задать Марджин отдельно */
+  height: 30%;
+}
+
+.block2 {
+  border: 1px solid; /* чтобы было видно какой бордер у секций */
+  flex-direction: row;
+  display: flex;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+}
+
+.block3 {
+  border: 1px solid; /* чтобы было видно какой бордер у секций */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  height: 25%;
+}
+
+.block4 {
+  border: 1px solid; /* чтобы было видно какой бордер у секций */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.asside {
+  display: flex;
+  justify-content: center; /* все элементы по оси У выставить по центру */
+  /* align-items: center; все элементы по оси Х выставить по центру */
+  /* margin: 25px; здесь можно задать Марджин отдельно Футеру и отлельно .Боксу */
+  flex-grow: 1; /* займёт всё оставшееся свободное пространство */
+  margin: 25px;
+}
+
+footer {
+  flex-basis: 20%; /* 20% от height: 100vh */
+  display: flex; /* Чтобы секции были не в столбик, встали друг за другом */
+  /* justify-content: space-between; Чтобы секции футера равномерно растянулись на всю ширину. Но мы его убрали т.к. в .box задали flex-grow: 1; */
+  gap: 25px; /* Между ячейками делает расстояние */
+  padding: 20px; /* внешний отступ у ячеек */
+  /* margin: 25px; здесь можно убрать Паддинг и задать Марджин отдельно Футеру и отлельно .Боксу */
+}
+
+.box {
+  border: 1px solid; /* чтобы было видно какой бордер у секций футера */
+  flex-grow: 1; /* чтобы секции футера заняли всё пространство равномерно */
+  display: flex; /* Обращаемся к родителю */
+  justify-content: center; /* все элементы по оси У выставить по центру */
+  align-items: center; /* все элементы по оси Х выставить по центру */
+  /* margin: 25px; здесь можно задать Марджин отдельно Футеру и отлельно .Боксу */
+}
